@@ -1,0 +1,35 @@
+{
+  "name": "elm-typescript",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha --watch",
+    "build": "tsc ./src/*.ts --outDir dist",
+    "example": "npm run build && (cd example && node ../cli && npx eslint src && elm-analyse)"
+  },
+  "author": "m@smuco.de",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.26",
+    "@types/prettier": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "chai": "^4.2.0",
+    "elm-analyse": "^0.16.5",
+    "eslint": "^7.5.0",
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2"
+  },
+  "bin": {
+    "elm-typescript": "cli.js"
+  },
+  "dependencies": {
+    "typescript": "^3.9.7",
+    "elm-format": "^0.8.3",
+    "prettier": "^2.0.5"
+  }
+}

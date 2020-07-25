@@ -1,0 +1,47 @@
+{
+  "types": {
+    "records": {
+      "Record": {
+        "string": "String",
+        "int": "Int",
+        "bool": "Bool",
+        "listString": "List String",
+        "dictInt": "Dict Int",
+        "maybeBool": "Maybe Bool",
+        "otherRecord": "OtherRecord"
+      },
+      "OtherRecord": {
+        "otherString": "String"
+      },
+      "User": {
+        "id": "String",
+        "name": "String"
+      }
+    },
+    "enums": {
+      "Color": ["Red", "Green", "Blue", "Yellow"]
+    },
+    "unions": {
+      "Event": {
+        "Login": {
+          "username": "String",
+          "password": "String"
+        },
+        "Logout": {
+          "id": "String",
+          "uid": "String"
+        }
+      }
+    }
+  },
+  "ports": {
+    "toElm": {
+      "userAuthenticated": "User",
+      "userToElm": "User"
+    },
+    "fromElm": {
+      "logout": "()",
+      "userFromElm": "User"
+    }
+  }
+}
