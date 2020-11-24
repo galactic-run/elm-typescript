@@ -2,6 +2,27 @@
 
 Type safety from elm to typescript and back.
 
+Caveat: This project is very alpha.
+
+## Installation
+
+`npm install elm-typescript`
+
+## Usage
+
+If you have an existing elm project simply run:
+
+`npx elm-typescript init`
+
+It assumes the paths `src/elm` and `src/ts` exists, and that `src/elm` is configured in `elm.json`. If this isn't the case you can modify the generated config `elm-typescript.json` with your paths.
+
+To generate new types after you've modified the config: 
+
+`npx elm-typescript`
+
+Further down you'll find instructions how to set up a project from scratch with elm-typescript.
+
+
 ## Config
 
 The config consist of two main parts. A types section and a ports section.
@@ -176,7 +197,7 @@ subscriptions _ =
 Ports.elm also exposes functions for the outgoing ports ala logout : () -> Cmd msg.
 
 
-## How to try it out
+## Setting up a elm project from scratch with elm-typescript
 
 To test it out yourself follow these steps:
 
