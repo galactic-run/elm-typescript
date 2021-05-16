@@ -33,7 +33,7 @@ In the types section you can define records. enums and unions.
 
 What you define in the records section is turned into Elm records, and TS interfaces. As an example, to represent an user, you would add something like:
 
-```
+```json
 {
   "types": {
     "records": {
@@ -55,7 +55,7 @@ Dicts always use Strings for keys. I could have made the config require you to s
 
 Enums are turned into Elm custom types and TS enums.
 
-```
+```json
 {
   "types": {
     "enums": {
@@ -75,7 +75,7 @@ I don’t think it makes sense to keep both the enums and unions sections. So my
 
 Currently unions are defined like this:
 
-```
+```json
 {
   "types": {
     "unions": {
@@ -100,7 +100,7 @@ Currently unions are defined like this:
 
 I think it was a mistake to use this anonymous record syntax, so my plan is to use the same syntax as record values:
 
-```
+```json
 {
   "types": {
     "unions": {
@@ -120,7 +120,7 @@ And you’ll have to define the records yourself.
 
 In the ports section you define any incoming and outgoing messages:
 
-```
+```json
 {
   "ports": {
     "toElm": {
@@ -144,7 +144,7 @@ The ports are put in gen/ports.ts and Gen/Ports.Elm.
 
 To wire up the TS side of things you’ll do something like this:
 
-```
+```elm
 import Ports from "./gen/ports";
 import { User, Role } from "./gen/types";
 import { Elm } from "../elm/Main";
@@ -179,7 +179,7 @@ Oh, I also generate a index.d.ts which is why the import { Elm } from "../elm/Ma
 
 To wire up the Elm side of things you’d do something like:
 
-```
+```elm
 import Gen.Ports as Ports
 
 type Msg
@@ -201,7 +201,7 @@ Ports.elm also exposes functions for the outgoing ports ala logout : () -> Cmd m
 
 To test it out yourself follow these steps:
 
-```
+```bash
 npm init -y
 npm install elm 
 npm install galactic-run/elm-typescript
