@@ -14,12 +14,11 @@
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.4",
-    "@types/node": "^14.14.9",
+    "@types/node": "^15.3.0",
     "@types/prettier": "^2.1.5",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
     "chai": "^4.2.0",
-    "elm-analyse": "^0.16.5",
     "eslint": "^7.14.0",
     "mocha": "^8.2.1",
     "ts-node": "^9.0.0"
