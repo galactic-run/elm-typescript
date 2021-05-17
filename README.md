@@ -4,6 +4,8 @@ Type safety from elm to typescript and back.
 
 Caveat: This project is very alpha.
 
+[![Node.js CI](https://github.com/galactic-run/elm-typescript/actions/workflows/node.js.yml/badge.svg)](https://github.com/galactic-run/elm-typescript/actions/workflows/node.js.yml)
+
 ## Installation
 
 `npm install elm-typescript`
